@@ -42,6 +42,37 @@ namespace TestProject
 
         }
 
+        [TestMethod]
+        public void TestMethodPriceMC()
+        {
+            //Arrange
+            MC mC = new MC();
+            double price;
+
+            //Act
+            price = mC.Price();
+
+            //Assert
+            Assert.AreEqual(125, price);
+
+            
+            
+            
+        }
+        [TestMethod]
+        public void TestMethodVehicleMC()
+        {
+            //Arrange
+            MC mC = new MC();
+            string vehicle;
+
+            //Act
+            vehicle = mC.Vehicle();
+
+            //Assert
+            Assert.AreEqual("MC", vehicle);
+
+        }
 
 
 
