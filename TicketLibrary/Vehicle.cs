@@ -4,7 +4,29 @@ using System.Text;
 
 namespace TicketLibrary
 {
-    class Vehicle
+    public abstract class Vehicle
     {
+        private string licensePlate;
+
+        public string LicensePlate
+        {
+            get
+            {
+                return licensePlate;
+            }
+
+            set
+            {
+                if( value.Length > 7)
+                {
+                    throw new Exception("License plate cannot be longer than 7 characters!");
+                }
+                else
+                {
+                    licensePlate = value;
+                }
+            }
+        }
+        
     }
 }

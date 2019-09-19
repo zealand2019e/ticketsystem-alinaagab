@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TicketLibrary
 {
-   public class Car
+   public class Car : Vehicle
     {
-        public string Licenseplate;
+        
         public DateTime Date;
         public double Price()
         {

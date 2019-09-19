@@ -4,10 +4,12 @@ using System.Text;
 
 namespace TicketLibrary
 {
-    public class MC
+    public class MC : Vehicle
     {
-        public string LicensePlate;
+        private string LicensePlate;
         public DateTime date;
+        string message = " ";
+        
 
         public double Price()
         {
@@ -19,6 +21,8 @@ namespace TicketLibrary
             string vehicle = "MC";
             return vehicle;
         }
+        
 
     }
+    
 }
