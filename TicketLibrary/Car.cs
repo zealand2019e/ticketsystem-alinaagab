@@ -8,10 +8,19 @@ namespace TicketLibrary
     {
         
         public DateTime Date;
-        public double Price()
+        public bool brobizz;
+
+        public  double Price()
         {
-            double price = 240;
-            return price;
+            if (brobizz)
+            {
+                return 240 * 0.95;
+            }
+            else
+            {
+                return 240;
+            }
+            
 
         }
         public string VehicleType()
@@ -20,6 +29,8 @@ namespace TicketLibrary
             return vehicletype;
 
         }
+
+        
       
         
 

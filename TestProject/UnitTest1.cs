@@ -77,14 +77,30 @@ namespace TestProject
         [TestMethod]
         public void TestMethodPlate()
         {
+            //Arrange + Act
             Car car = new Car();
 
+
+            //Assert
             Assert.ThrowsException<Exception>(() =>
             {
                 string c = "12345678";
                 car.LicensePlate = c;
             });
 
+        }
+        [TestMethod]
+        public void TestMethodBrobizz()
+        {
+            //Arrange
+            double expectedResult = 240 * 0.95;
+
+            //Act
+            Car car = new Car();
+            car.brobizz = true;
+
+            //Assert
+            Assert.AreEqual(expectedResult, car.Price());
         }
         
         
