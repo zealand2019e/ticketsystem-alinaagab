@@ -9,17 +9,33 @@ namespace TicketLibrary
         
         public DateTime Date;
         public bool brobizz;
+       
+            
 
         public  double Price()
+            
         {
+           
+           
+
+            double price = 240;
+            
+            if (Date.DayOfWeek==DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                price -= price * 20 / 100;
+
+            }
+
             if (brobizz)
             {
-                return 240 * 0.95;
+                price=price * 0.95;
             }
-            else
-            {
-                return 240;
-            }
+            // else
+            //{
+            //  return 240;
+            //}
+            return price;
+           
             
 
         }
@@ -29,7 +45,9 @@ namespace TicketLibrary
             return vehicletype;
 
         }
+        
 
+       
         
       
         

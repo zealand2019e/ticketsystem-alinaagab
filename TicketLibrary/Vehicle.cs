@@ -7,6 +7,8 @@ namespace TicketLibrary
     public abstract class Vehicle
     {
         private string licensePlate;
+        public DateTime Date;
+
 
         public string LicensePlate
         {

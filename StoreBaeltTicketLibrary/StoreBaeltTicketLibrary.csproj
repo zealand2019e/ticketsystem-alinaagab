@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Extern Dll\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestProject\TestProject.csproj" />
+    <ProjectReference Include="..\TicketLibrary\TicketLibrary.csproj" />
+  </ItemGroup>
 
 </Project>

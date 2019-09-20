@@ -102,7 +102,32 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expectedResult, car.Price());
         }
-        
+        [TestMethod]
+        public void TestMethodWeekendDiscount()
+        {
+            //Arrange
+            double expectedResult = 240 - 240 * 20 / 100;
+            expectedResult -= expectedResult * 5 /100;
+            double price;
+
+
+            //Act
+            Car car = new Car();
+            car.brobizz = true;
+            DateTime date = new DateTime(2019, 9 , 21);
+            car.Date = date;
+
+            price = car.Price();
+
+
+            //Assert
+            Assert.AreEqual(expectedResult, price, 0.1);
+            
+            
+            
+            
+        }
+
         
 
         
